@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'MuseoModerno', cursive;
+    margin: 0;
+    padding: 0;    
+}
+
+header {
+    position: fixed;
+    background: #22242a;
+    padding: 20px;
+    width: 100%;
+    height: 30px;
+    z-index: 2;
+}
+
+.left_area h3 {
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.left_area span {
+    color: #1dc4e7;
+}
+
+.logout_btn {
+    padding: 5px;
+    background: #19b3d3;
+    text-decoration: none;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    cursor: none;
+}
+
+.sidebar {
+    background:  #2f3034;
+    margin-top: 70px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+    z-index: 1;
+}
+
+.sidebar profile_image {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.sidebar h4 {
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+.sidebar a:hover {
+    background: #19b3d3;
+}
+
+.sidebar i {
+    padding-right: 10px;
+}
+
+label #sidebar_btn {
+    z-index: 2;
+    color: #ffffff;
+    position: fixed;
+    cursor: pointer;
+    left: 210px;
+    font-size: 25px;
+    margin: 5px;
+    margin-top: 80px;
+    display: none;
+}
+
+label #sidebar_btn:hover {
+    color: #19b3d3;
+}
+
+label #cerrar_btn {
+    z-index: 2;
+    display: red;
+    position: fixed;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 25px;
+    margin: 5px;
+    margin-top: 80px;
+    left: 210px;
+    display: block;
+}
+
+#check:checked ~ label #cerrar_btn {
+    display: none;
+}
+
+#check:checked ~ .sidebar {
+    left: -190px;
+}
+
+#check:checked ~ .sidebar a span {
+    display: none;
+}
+
+#check:checked ~ .sidebar a {
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ label #sidebar_btn {
+    display: block;
+    left: 15px;
+}
+
+.sidebar #logo {
+    position: fixed;
+    top: 130px;
+    transition: 0.5s;
+    transition-property: right;
+    display: none;
+}
+
+#check:checked ~ .sidebar #logo{
+    display: block;
+    left: 7px;
+}
+
+main {
+    padding: 15px;
+    padding-left: 75px;
+    padding-top: 55px;
+}
+
+.buscador {
+    margin-top: 2rem;
+}
+
+.buscador input {
+    font-family: 'MuseoModerno', cursive;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    width: 150px;
+    font-size: 13px;
+    border-radius: 15px;
+}
+
+.btnbuscar {
+    padding: 9px 9px 9px 9px;
+    border-radius: 10px;
+    background: #19b3d3;
+    color: #fff;
+    cursor: pointer;
+}
+
+#contenido {    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+#contenido1 {
+    margin-top: 1rem;    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+#contenido2 {
+    margin-top: 1rem;    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+#contenido3 {
+    margin-top: 1rem;    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+#titulo {
+    text-align: center;
+}
+
+.adentro a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.adentro a:visited {
+    color: black;
+}
+
+.item {
+    background-color: #fff;
+    cursor: pointer;
+    border-style: solid;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.item-img {
+    width: 100%;
+    display: block;    
+    border-radius: 15px;
+}
+
+.item-text {
+    padding: 0px;
+    margin: 0;
+}
+
+.item-text h3, p {
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+@media screen and (min-width: 590px){
+    #contenido {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    #contenido1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    #contenido2 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    #contenido3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 770px){
+    #contenido {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    #contenido1 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    #contenido2 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    #contenido3 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width: 990px){
+    #contenido {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    #contenido1 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    #contenido2 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    #contenido3 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+
+
+
+/*ocultar contenidos*/
+#contini {
+    display: block;
+}
+
+#contbus {
+    display: none;
+}
+
+#contlat {
+    display: none;
+}
+
+#contsub {
+    display: none;
+}
+
+#contlis {
+    display: none;
+}
+
+#contrep {
+    display: none;
+}
+
+#contlis {
+    padding-top: 2rem;
+}
+
+#fondoimg {
+    border-radius: 10px;
+}
+
+#liscap {
+    padding-bottom: 1rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#liscap p {
+    border-style: solid;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+#liscap p:hover {
+    background: #0d0d0f;
+    color: aliceblue;
+    transition: 0.6s;
+}
+
+.descrip {
+    border: solid;
+    width: auto;
+    border-radius: 15px;
+}
+
+.izqui {
+    width: 120px;
+    padding: 7px;
+    border-radius: 20px;
+}
+
+#titdes {
+    margin: 0;
+    font-size: 13.5px;
+}
+
+.descrip aside {
+    font-size: 12px;
+}
+
+#codigo {
+    display: none;
+}
+
+.repro {
+    border: solid;
+    width: auto;
+    border-radius: 15px;
+}
+
+#reprodu {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+#reprodu iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
